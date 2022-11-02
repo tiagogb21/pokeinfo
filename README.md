@@ -4,7 +4,7 @@
 
 Typescript, Next
 
-obs.: nesse projeto foi utilizado getStaticPaths e getStaticProps para renderizar paginas estaticas.
+obs.: nesse projeto foram utilizados getStaticPaths e getStaticProps para renderizar paginas estaticas.
 
 ## Api:
 
