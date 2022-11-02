@@ -4,6 +4,8 @@
 
 Typescript, Next
 
+obs.: nesse projeto utilizei getStaticPaths e getStaticProps para renderizar paginas estaticas.
+
 ## Api:
 
 https://pokeapi.co/
