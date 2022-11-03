@@ -21,7 +21,18 @@ interface IColors {
 
 const PokemonInfo: React.FC = ({ pokemon } : IParams) => {
   return (
-    <section className={ style.container }>
+    <section
+      className={ style.container }
+      style={{
+        // background: '#0A1521',
+        backgroundImage: `
+          linear-gradient(to bottom right,
+            ${ colors[pokemon.types[0] as keyof IColors] },
+            ${ pokemon.types[1] ? colors[pokemon.types[1] as keyof IColors] : '#ffffff'}
+          )
+        `
+      }}
+    >
       <Link href="/">Home</Link>
       {
         pokemon && (
@@ -50,7 +61,7 @@ const PokemonInfo: React.FC = ({ pokemon } : IParams) => {
               </article>
               <article className={ style.smallBox }>
                 <article className={ style.boxTxt }>
-                  <p><span className={style.colorTxt}>Habilidades:</span></p>
+                  <p><span className={ style.colorTxt }>Habilidades:</span></p>
                   {
                     pokemon.abilities.map((abilitie: string) => (
                       <p key={ abilitie }>{ abilitie }</p>
@@ -58,14 +69,14 @@ const PokemonInfo: React.FC = ({ pokemon } : IParams) => {
                   }
                 </article>
                 <article className={ style.boxTxt }>
-                  <p><span className={style.colorTxt}>Altura</span>: { pokemon.height/10 } m</p>
-                  <p><span className={style.colorTxt}>Peso</span>: { pokemon.weight/10 } kg</p>
+                  <p><span className={ style.colorTxt }>Altura</span>: { pokemon.height/10 } m</p>
+                  <p><span className={ style.colorTxt }>Peso</span>: { pokemon.weight/10 } kg</p>
                 </article>
               </article>
             </section>
-            <article>
+            <article className={style.boxAbilities}>
               {
-                pokemon.stats.map(({ statName, statValue} : {statName: string, statValue: string }) => (
+                pokemon.stats.map(({ statName, statValue } : { statName: string, statValue: string }) => (
                   <p key={ statName }>{statName} : {statValue}</p>
                 ))
               }

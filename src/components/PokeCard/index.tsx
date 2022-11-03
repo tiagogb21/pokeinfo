@@ -8,16 +8,12 @@ import { URL_POKEMON_IMAGE } from "../../utils/constants";
 import { addZeroes, normalizePokemonLite } from "../../utils/functions";
 import { fetcher } from "../../services/fetcher";
 import Link from "next/link";
+import { IColors } from "../../types/IColors";
 
 interface IProps {
   name: string;
   id: number;
   types: string[]
-}
-
-interface IColors {
-  normal: string;
-  fire: string;
 }
 
 const PokeCard = ({ url, index, ...props } : { url: string, index: number }) => {
