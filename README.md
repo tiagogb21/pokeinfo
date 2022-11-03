@@ -12,7 +12,7 @@ https://pokeapi.co/
 
 ### Objetivo:
 
-Criar uma pokedex com informaçoes sobre pokemons
+Criar uma pokedex com informaçoes detalhadas sobre pokemons
 
 ## Para utilizar o pojeto:
 
